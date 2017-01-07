@@ -1,0 +1,48 @@
+1. Requirements for Running the Puma-EM Programs
+------------------------------------------------
+
+Prior to running Puma-EM, there is a serie of libraries/programs that need 
+to be installed. All these libraries/programs are released under Open-Source
+licences. Before compiling them, first look if it exists as a package for
+your distribution.
+
+  1) gmsh, a three-dimensional finite element mesh generator, available at
+     http://www.geuz.org/gmsh/.
+
+  2) g++ and gfortran compilers.
+
+  3) The Blitz++ library, a C++ fast Array library, available at
+     http://www.oonumerics.org/blitz/
+
+  4) NumPy and SciPy (both available at http://www.scipy.org/).
+
+  5) matplotlib for plotting, available at http://matplotlib.sourceforge.net/
+
+  6) Open-MPI, the future replacement of LAM/MPI. Puma-EM can run on both
+     Environments. See http://www.open-mpi.org/
+
+     We recommend the use of Open-MPI, as it does not suffer from annoying
+     LAM/MPI bugs, such as the infamous "(set_stdio): Too many files 
+     open in system" that happens when you don't reset lamd often enough.
+
+  7) mpi4py, MPI for Python, available at http://www.scipy.org/
+
+     Please note that the MPI environment has to be installed prior to 
+     compiling and installing mpi4py. mpi4py compiled on LAM/MPI env
+     will not work within Open-MPI environment, and vice-versa.
+
+The scripts in this directory should help you to install Puma-EM dependencies. 
+I recommend you to take a look at them, as they may make your life easier.
+
+
+1.1 Ubuntu/Debian
+-----------------
+Typically, for Ubuntu/Debian flavors, most of these packages are available 
+through the package manager. Try a search by name through the package manager.
+
+1.2 RedHat / Fedora / CentOS
+----------------------------
+Starting from FC18, Support for Fedora automated scripts has dropped, in part due  
+to the extremely difficult installation procedure (disk partitioning mess). Try searching the 
+packages by name, and when it fails, check the installation procedure in the user guide.
+
